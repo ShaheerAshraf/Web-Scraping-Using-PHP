@@ -42,7 +42,7 @@ class DataScraper {
     }
 
     public function insertNDM(){
-        
+        // INSERT QUERIES
         $result=$this->scrapeData(7);
         mysqli_query($this->conn, "INSERT INTO ndm VALUES(NULL,'$result[0]','$result[1]','$result[2]','$result[3]')");
         // echo $result[0];
@@ -66,7 +66,7 @@ class DataScraper {
 }
 
 // Usage example
-$url = 'https://dps.psx.com.pk/trading-panel#REG';
+$url = 'WEBSITE URL';
 $dataScraper = new DataScraper($url);
 
 $dataScraper->insertNDM();
